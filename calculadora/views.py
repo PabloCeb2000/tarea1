@@ -12,6 +12,7 @@ class Fraccion:
         return dumps(self, default=lambda o:o.__dict__, sort_keys=False, indent=4)    
 
 def index(request):
+    #return HttpResponse("Bienvenido")
     return render(request, 'index.html')
 
 def proceso(request):
