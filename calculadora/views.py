@@ -17,8 +17,9 @@ def index(request):
 
 def proceso(request):
     nombre = request.POST['nombre']
-    nombre = nombre.upper()
-    return HttpResponse('HOLA ' + nombre)
+    nombre = nombre.title()
+    #return HttpResponse('HOLA ' + nombre)
+    return render(request, 'proceso.html', {'name': nombre})
 
 def bienvenida(request):
     letrero= "Bienvenida"
